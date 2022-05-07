@@ -33,7 +33,7 @@ Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte
 <ol>
 </p>
 
-  <p align="center"><img src="imgs/maxseq.png"></p>
+<p align="center"><img src="imgs/maxseq.png"></p>
   
 # Compilação e Execução
 
