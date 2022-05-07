@@ -25,8 +25,8 @@ Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte
   <li>Após da inserção em aux verifica-se se S2 só tem um item se tiver copia-se os dados de aux para mseq e para-se de verificar as posições de S1 pois a maior sequência já foi achada, método para copiar:
   <p align="center"><img src="imgs/copia.png"></p>
   </li>
-  <li>Se a S2 ter mais de um item é chamado o método FindMaxSeq que acha até onde as duas sequência são iguais e estes dados são aramazendaos em aux, método FindMaxSeq:
-  <p align="center"><img src="imgs/copia.png"></p>
+  <li>Se a S2 ter mais de um item é chamado o método FindEqualSeq que acha até onde as duas sequência são iguais e estes dados são aramazendaos em aux, método FindEqualSeq:
+  <p align="center"><img src="imgs/equalseq.png"></p>
   </li>
   <li>Após isto se a sequência em aux for maior que em mseq os dados de aux são copidados para mseq</li>
   <li>Se a sequência em mseq é a S2 para de se verificar pois não a squência maior de S2 em S1, senão continua-se a procurar uma sequência maior</li>
