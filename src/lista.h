@@ -29,4 +29,10 @@ bool Insere(Lista *lista, Item d);
 
 bool Remove(Lista *lista, Item *d);
 
+Lista FindMaxSeq(Lista *l1, Lista *l2);
+
+void CopySeq(Lista *dest, Lista *src);
+
+void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int *pos);
+
 bool LerArquivo(Lista *lista);

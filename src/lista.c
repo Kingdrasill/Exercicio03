@@ -53,6 +53,54 @@ bool Remove(Lista *lista, Item *d) {
     return ok;
 }
 
+Lista FindMaxSeq(Lista *l1, Lista *l2) {
+    Lista mseq, aux;
+    int pos=0;
+    FLVazia(&mseq);
+    FLVazia(&aux);
+
+    for(int i=0; i<l1->Ultimo; i++) {
+        if(l1->vet[i].value[0] == l2->vet[0].value[0] && l1->vet[i].value[1] == l2->vet[0].value[1] && l1->vet[i].value[2] == l2->vet[0].value[2]) {
+            pos = i;
+
+            Insere(&aux, l1->vet[i]);
+            if(l2->Ultimo == 1) {
+                i = l1->Ultimo;
+                CopySeq(&mseq, &aux);
+            } else {
+                FindEqualSeq(l1, l2, &aux, &pos);
+                if(mseq.Ultimo < aux.Ultimo){
+                    CopySeq(&mseq, &aux);
+                }
+                i = pos;
+            }
+            FLVazia(&aux);
+        }
+    }
+
+    return mseq;
+}
+
+void CopySeq(Lista *dest, Lista *src) {
+    for(int i=0; i<src->Ultimo; i++) {
+        Insere(dest, src->vet[i]);
+    }
+}
+
+void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int *pos) {
+    int j = 1;
+
+    for(int i=(*pos+1); i<l1->Ultimo; i++) {
+        if(l1->vet[i].value[0] == l2->vet[j].value[0] && l1->vet[i].value[1] == l2->vet[j].value[1] && l1->vet[i].value[2] == l2->vet[j].value[2]) {
+            Insere(aux, l1->vet[i]);
+        }
+        *pos = i;
+        j++;
+        if(j == l2->Ultimo)
+            i = l1->Ultimo;
+    }
+}
+
 bool LerArquivo(Lista *lista) {
     FILE *fp;
     Item D;
@@ -60,10 +108,9 @@ bool LerArquivo(Lista *lista) {
     char seq[SEQ_MAXTAM];
     strcpy(D.value, "");
 
-    printf("Nome do arquivo onde esta a sequencia: ");
-	fgets(arquivo, FILE_MAXTAM-4, stdin);
+    printf("Nome do arquivo onde esta a sequencia(com extensao): ");
+	fgets(arquivo, FILE_MAXTAM, stdin);
 	strtok(arquivo, "\n");
-	strcat(arquivo, ".txt");
 
     fp = fopen(arquivo, "r");
     if (fp == NULL) {
