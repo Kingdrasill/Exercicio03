@@ -33,7 +33,7 @@ Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte
 <ol>
   <p align="center"><img src="imgs/maxseq.png"></p>
 </p>
-
+<br>
 # Compilação e Execução
 
 O progama disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
