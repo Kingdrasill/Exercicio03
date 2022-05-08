@@ -1,4 +1,10 @@
 # Exercicio03
+
+<div style="display: inline-block;">
+<img align="center" height="20px" width="60px" src="https://img.shields.io/badge/Language-C-blue"/> 
+<img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Made%20in-VSCode-red"/> 
+</div>
+<br>
 <p align="justify">
 O problema da máxima cadeia. Elabore um programa que receba uma cadeias de DNA. Cada posição da cadeia deve conter um códon, ou seja, uma triade de nucleotídeos → T, A, G, C. Feito isso, leia de um arquivo uma sequência de nucleotídios (i.e., ACGTGGCTCTCTAACGTACGTACGTACGGGGTTATATTCGAT) e tente identificar a maior cadeia da lista que se relaciona a essa entrada.
 </p>
