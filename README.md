@@ -24,6 +24,7 @@ A estrutura da lista que salva a cadeia de DNA é a seguinte, cada item da lista
 
 <p align="justify">
 Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte lógica:
+<p align="center"><img src="imgs/maxseq.png"></p>
 <ol>
   <li>Precisa-se de duas lista extras mseq e aux, uma auxilir e uma que guarda a maior sequência, e uma varíavel pos que guarada qual a posição de S1 está sendo verificada</li>
   <li>Depois começa-se posiçao por posição de S1 a verificar se ela é igual a primeira posição de S2</li>
@@ -38,8 +39,6 @@ Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte
   <li>Se a sequência em mseq é a S2 para de se verificar pois não a squência maior de S2 em S1, senão continua-se a procurar uma sequência maior</li>
 <ol>
 </p>
-
-<p align="center"><img src="imgs/maxseq.png"></p>
   
 # Compilação e Execução
 
