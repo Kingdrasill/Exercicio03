@@ -12,7 +12,7 @@ O problema da máxima cadeia. Elabore um programa que receba uma cadeias de DNA.
 # Solução
 
 <p align="justify">
-Para o programa ser utilizado será preciso de duas cadeias de DNA que serão armazendas em uma lista, em que cada posição da lista é guardado um códon, estas cadeias o usuário as passa por um arquivo para cada cadeia, em que os arquivos não podem estar vazios, o número de letras tem que ser múltiplo de 3 e a cadeia a ser procurada a maior sequência igual tem que ser maior que a outra.
+Para o programa ser utilizado será preciso de duas cadeias de DNA, elas podem ter até 600 caracteres ou 200 códons, que serão armazendas em listas lineares, [vide git](<a href="https://github.com/mpiress/linear_list">https://github.com/mpiress/linear_list</a>), separadas, em que cada posição da lista é guardado um códon, estas cadeias o usuário as passa por um arquivo para cada cadeia, em que os arquivos não podem estar vazios, o número de letras tem que ser múltiplo de 3 e a cadiea em que vai ser procurada a maior sequência deve ser maior ou igual que a outra.
 </p>
 
 <p align="justify">
