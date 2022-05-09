@@ -59,22 +59,23 @@ Lista FindMaxSeq(Lista *l1, Lista *l2) {
     FLVazia(&mseq);
     FLVazia(&aux);
 
-    for(int i=0; i<l1->Ultimo; i++) {
-        if(l1->vet[i].value[0] == l2->vet[0].value[0] && l1->vet[i].value[1] == l2->vet[0].value[1] && l1->vet[i].value[2] == l2->vet[0].value[2]) {
-            pos = i;
-
-            Insere(&aux, l1->vet[i]);
-            if(l2->Ultimo == 1) {
-                i = l1->Ultimo;
-                CopySeq(&mseq, &aux);
-            } else {
-                FindEqualSeq(l1, l2, &aux, &pos);
-                if(mseq.Ultimo < aux.Ultimo){
+    for(int j=0; j<l2->Ultimo; j++) {
+        for(int i=0; i<l1->Ultimo; i++) {
+            if(l1->vet[i].value[0] == l2->vet[j].value[0] && l1->vet[i].value[1] == l2->vet[j].value[1] && l1->vet[i].value[2] == l2->vet[j].value[2]) {
+                pos = i;
+                Insere(&aux, l1->vet[i]);
+                if(l2->Ultimo == 1) {
+                    i = l1->Ultimo;
                     CopySeq(&mseq, &aux);
+                } else {
+                    FindEqualSeq(l1, l2, &aux, pos, j);
+                    if(mseq.Ultimo < aux.Ultimo){
+                        CopySeq(&mseq, &aux);
+                    }
+                    i = pos;
                 }
-                i = pos;
+                FLVazia(&aux);
             }
-            FLVazia(&aux);
         }
     }
 
@@ -82,19 +83,20 @@ Lista FindMaxSeq(Lista *l1, Lista *l2) {
 }
 
 void CopySeq(Lista *dest, Lista *src) {
+    FLVazia(dest);
     for(int i=0; i<src->Ultimo; i++) {
         Insere(dest, src->vet[i]);
     }
 }
 
-void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int *pos) {
-    int j = 1;
+void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int posl1, int posl2) {
+    int j = 1 + posl2;
 
-    for(int i=(*pos+1); i<l1->Ultimo; i++) {
+    for(int i=(posl1+1); i<l1->Ultimo; i++) {
         if(l1->vet[i].value[0] == l2->vet[j].value[0] && l1->vet[i].value[1] == l2->vet[j].value[1] && l1->vet[i].value[2] == l2->vet[j].value[2]) {
             Insere(aux, l1->vet[i]);
         }
-        *pos = i;
+        posl1 = i;
         j++;
         if(j == l2->Ultimo)
             i = l1->Ultimo;

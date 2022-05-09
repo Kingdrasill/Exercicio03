@@ -13,7 +13,7 @@ int main() {
     if(!LerArquivo(&S2)) {
         exit(1);
     }
-
+    
     MS = FindMaxSeq(&S1, &S2);
 
     printf("\nMaior sequencia de codons da sequencia 2 na sequencia 1: ");

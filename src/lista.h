@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#define MAXTAM 100
-#define SEQ_MAXTAM 300
+#define MAXTAM 200
+#define SEQ_MAXTAM 600
 #define FILE_MAXTAM 50
 
 typedef struct Item Item;
@@ -33,6 +33,6 @@ Lista FindMaxSeq(Lista *l1, Lista *l2);
 
 void CopySeq(Lista *dest, Lista *src);
 
-void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int *pos);
+void FindEqualSeq(Lista *l1, Lista *l2, Lista *aux, int posl1, int posl2);
 
 bool LerArquivo(Lista *lista);
