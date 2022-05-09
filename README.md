@@ -36,7 +36,7 @@ Para se achar a maior sequência de S2 em S1 o método a seguir segua a seguinte
   <p align="center"><img src="imgs/equalseq.png"></p>
   </li>
   <li>Após isto se a sequência em aux for maior que em mseq os dados de aux são copidados para mseq</li>
-  <li>Se a sequência em mseq é a S2 para de se verificar pois não a squência maior de S2 em S1, senão continua-se a procurar uma sequência maior</li>
+  <li>Agora este processo é repitido sem prieiro códon de S2 sté o códon a ser verifaco é o último de S2</li>
 <ol>
 </p>
   
